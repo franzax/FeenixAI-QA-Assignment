@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-01-30T17:13:10.973Z",
+    "end": "2025-01-30T17:13:15.758Z",
+    "duration": 4785,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7a078c99-7893-4e54-808e-a95c974d87e0",
+      "title": "",
+      "fullFile": "cypress\\e2e\\tests\\verifyShoppingCart.cy.js",
+      "file": "cypress\\e2e\\tests\\verifyShoppingCart.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Remove an element from the Cart and Verify that is removed",
+          "fullTitle": "Remove an element from the Cart and Verify that is removed",
+          "timedOut": null,
+          "duration": 1552,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit('https://www.saucedemo.com/');\n_loginPage.default.fastLogin(\"standard_user\");\n_inventoryPage.default.verifyUserLoginSuccess();\n_inventoryPage.default.addItemToChart();\n_inventoryPage.default.clickOnShoppingCartButton();\n_shoppingCartPage.default.verifyElementIsOnCart();\n_shoppingCartPage.default.removeFirstElementOnCart();\n_shoppingCartPage.default.verifyFewElementsOnCart(0);",
+          "err": {},
+          "uuid": "0efd3883-9025-4f5b-a105-27da360cfc24",
+          "parentUUID": "7a078c99-7893-4e54-808e-a95c974d87e0",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "Add an Item to the Shopping Cart and Checkout",
+          "fullTitle": "Add an Item to the Shopping Cart and Checkout",
+          "timedOut": null,
+          "duration": 2379,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit('https://www.saucedemo.com/');\n_loginPage.default.fastLogin(\"standard_user\");\n_inventoryPage.default.verifyUserLoginSuccess();\n_inventoryPage.default.addItemToChart();\n_inventoryPage.default.clickOnShoppingCartButton();\n_shoppingCartPage.default.verifyElementIsOnCart();\n_shoppingCartPage.default.clickOnCheckoutButton();\n_shoppingCartPage.default.fillUptheForm();\n_shoppingCartPage.default.clickOnContinueButton();\n_shoppingCartPage.default.verifyElementIsOnCart();\n_shoppingCartPage.default.clickOnFinishButton();\n_shoppingCartPage.default.verifyOrderIsDispatched();",
+          "err": {},
+          "uuid": "454c1e41-5b98-41c0-853d-d3240a275ccd",
+          "parentUUID": "7a078c99-7893-4e54-808e-a95c974d87e0",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "0efd3883-9025-4f5b-a105-27da360cfc24",
+        "454c1e41-5b98-41c0-853d-d3240a275ccd"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 3931,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "Cypress Inline Reporter",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

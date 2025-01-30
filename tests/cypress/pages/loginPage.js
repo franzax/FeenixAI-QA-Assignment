@@ -21,10 +21,20 @@ class loginPage {
         this.elements.password().type("secret_sauce");
     }
 
+    insertIncorrectPassword(){
+        this.elements.password().type("FakePassword");
+    }
+
     readErrorMsg(expectedError){
         cy.on(this.elements.errorMsg(), (str) => {
             expect(str.toString()).to.contain(expectedError);
         })
+    }
+
+    fastLogin(username){
+        this.insertUser(username);
+        this.insertPassword();
+        this.clickOnLoginButton();
     }
 
 
