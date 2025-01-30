@@ -2,7 +2,7 @@
 QA Automation Challenge Assignment - Cypress
 
 
-#How to Run
+# How to Run
 
 1. Clone the Repository.
 2. Install modules with "npm install".
